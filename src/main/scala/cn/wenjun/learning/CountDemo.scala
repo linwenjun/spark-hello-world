@@ -1,7 +1,9 @@
+package cn.wenjun.learning
+
 import org.apache.spark.{SparkConf, SparkContext}
 
-object HelloWorld {
-  def main(args: Array[String]) {
+class CountDemo {
+  def count(): Unit = {
     val conf = new SparkConf().setAppName("hello").setMaster("local")
     val sc = new SparkContext(conf)
     val text = sc.parallelize(Seq("a", "b", "b"))
