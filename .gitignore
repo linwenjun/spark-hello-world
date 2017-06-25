@@ -7,8 +7,6 @@ build/
 gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
 
 ### Windows template
 # Windows image file caches
@@ -119,7 +117,6 @@ project/plugins/project/
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 
@@ -174,5 +171,7 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+
+!gradle-warpper.jar
 
 
