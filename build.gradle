@@ -50,4 +50,8 @@ sourceSets {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.0'
+}
+
 mainClassName = 'cn.wenjun.learning.App'
