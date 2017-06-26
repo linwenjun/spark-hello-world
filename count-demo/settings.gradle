@@ -15,6 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'spark-hello-world'
-include 'count-demo'
-include 'java-app'
+rootProject.name = 'count-demo'

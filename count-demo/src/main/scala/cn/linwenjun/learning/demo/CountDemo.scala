@@ -1,4 +1,4 @@
-package cn.wenjun.learning
+package cn.linwenjun.learning.demo
 
 import org.apache.spark.{SparkConf, SparkContext}
 

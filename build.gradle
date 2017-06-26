@@ -7,51 +7,20 @@
  */
 
 // Apply the scala plugin to add support for Scala
-apply plugin: 'scala'
 apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'application'
 
 // In this section you declare where to find the dependencies of your project
-repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
-}
-
-dependencies {
-    // Use Scala 2.11 in our library project
-    compile 'org.scala-lang:scala-library:2.11.8'
-    compile 'org.scala-lang:scala-compiler:2.11.8'
-    compile 'org.apache.spark:spark-core_2.11:2.0.0'
-    compile 'com.google.guava:guava:20.0'
-
-    // Use Scalatest for testing our library
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.scalatest:scalatest_2.11:3.0.1'
-
-    // Need scala-xml at test runtime
-    testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.0.6'
-}
-
-sourceSets {
-    main {
-        java {
-            srcDirs =[]
-        }
-
-        scala {
-            srcDirs = ['src/main/java', 'src/main/scala']
-        }
-
-        resources {
-            srcDir 'src/main/resources'
-        }
+allprojects {
+    repositories {
+        jcenter()
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.0'
+
+dependencies {
+    compile project(':java-app')
 }
 
 mainClassName = 'cn.wenjun.learning.App'
